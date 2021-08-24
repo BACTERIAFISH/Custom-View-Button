@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CFB4CB4526D534A000CC7F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4CB4426D534A000CC7F3C /* AppDelegate.swift */; };
-		CFB4CB4726D534A000CC7F3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4CB4626D534A000CC7F3C /* SceneDelegate.swift */; };
 		CFB4CB4926D534A000CC7F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4CB4826D534A000CC7F3C /* ViewController.swift */; };
 		CFB4CB4C26D534A000CC7F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB4CB4A26D534A000CC7F3C /* Main.storyboard */; };
 		CFB4CB4E26D534A200CC7F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB4CB4D26D534A200CC7F3C /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		CFB4CB4126D534A000CC7F3C /* Custom View Button.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom View Button.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB4CB4426D534A000CC7F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFB4CB4626D534A000CC7F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CFB4CB4826D534A000CC7F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFB4CB4B26D534A000CC7F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFB4CB4D26D534A200CC7F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				CFB4CB4426D534A000CC7F3C /* AppDelegate.swift */,
-				CFB4CB4626D534A000CC7F3C /* SceneDelegate.swift */,
 				CFB4CB4826D534A000CC7F3C /* ViewController.swift */,
 				CFB4CB4A26D534A000CC7F3C /* Main.storyboard */,
 				CFB4CB4D26D534A200CC7F3C /* Assets.xcassets */,
@@ -139,7 +136,6 @@
 			files = (
 				CFB4CB4926D534A000CC7F3C /* ViewController.swift in Sources */,
 				CFB4CB4526D534A000CC7F3C /* AppDelegate.swift in Sources */,
-				CFB4CB4726D534A000CC7F3C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
