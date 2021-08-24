@@ -11,7 +11,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let customView = UIView()
+        customView.backgroundColor = .blue
+        
+        let button = CustomButton(view: customView, frame: CGRect(x: 100, y: 100, width: 200, height: 50))
+        view.addSubview(button)
     }
 
 
