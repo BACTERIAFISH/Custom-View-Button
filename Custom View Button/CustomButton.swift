@@ -11,6 +11,7 @@ class CustomButton: UIButton {
     
     enum HighlightStyle {
         case flash
+        case scale(ratio: CGFloat = 0.9)
     }
     
     private let customView: UIView
@@ -65,6 +66,11 @@ class CustomButton: UIButton {
             UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
                 self.customView.alpha = 0.5
             }, completion: nil)
+            
+        case .scale(let ratio):
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
+                self.customView.transform = CGAffineTransform(scaleX: ratio, y: ratio)
+            }, completion: nil)
         }
     }
     
@@ -73,6 +79,11 @@ class CustomButton: UIButton {
         case .flash:
             UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
                 self.customView.alpha = 1
+            }, completion: nil)
+            
+        case .scale(_):
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
+                self.customView.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
         }
     }
