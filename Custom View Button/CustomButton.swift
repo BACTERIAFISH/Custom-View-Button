@@ -12,10 +12,21 @@ class CustomButton: UIButton {
     enum HighlightStyle {
         case flash
         case scale(ratio: CGFloat = 0.9)
+        case shadow
     }
     
     private let customView: UIView
-    var highlightStyle: HighlightStyle = .flash
+    var highlightStyle: HighlightStyle = .flash {
+        didSet {
+            switch highlightStyle {
+            case .shadow:
+                customView.layer.shadowOpacity = 1
+                customView.layer.shadowOffset = CGSize(width: 3, height: 3)
+            default:
+                break
+            }
+        }
+    }
     
     init(view: UIView, frame: CGRect) {
         customView = view
@@ -71,6 +82,11 @@ class CustomButton: UIButton {
             UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
                 self.customView.transform = CGAffineTransform(scaleX: ratio, y: ratio)
             }, completion: nil)
+            
+        case .shadow:
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
+                self.customView.layer.shadowOffset = CGSize(width: 1, height: 1)
+            }, completion: nil)
         }
     }
     
@@ -84,6 +100,11 @@ class CustomButton: UIButton {
         case .scale(_):
             UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
                 self.customView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: nil)
+            
+        case .shadow:
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
+                self.customView.layer.shadowOffset = CGSize(width: 3, height: 3)
             }, completion: nil)
         }
     }

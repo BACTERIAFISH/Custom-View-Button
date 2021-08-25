@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         customView.backgroundColor = .blue
         
         let button = CustomButton(view: customView, frame: CGRect(x: 100, y: 100, width: 200, height: 50))
-        button.highlightStyle = .scale()
+        button.highlightStyle = .shadow
         view.addSubview(button)
     }
 
